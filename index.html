@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+    <script src = "main.js"></script>
+</head>
+<body id = "body" src = "blank.png">
+    <a href="#goto"><button onclick = "go(2)" id="tap">Tap anywhere to start</button></a>
+    <br>
+    <a href="#goto" ><button id ="backtogame"onclick = "go(2)"><b>back to game</b></button></a>
+    <div id = "choice"><button onclick = "freeze()" id="freezebutt"></button><button id = "bombbutt"onclick = "bombbomb()"></button></div>
+    <div id="right"></div>
+    <div id="middle"></div>
+    <div id="left"><label id = "mix"></label><button id = "make" onclick="make()"></button></div>
+    <div id="divider"></div>
+    <br>
+    <hr>
+    <a href="#goto" ><button id ="backtogameback"onclick = "go(2)"><b>back to game</b></button></a>
+    <br>
+    <img id = "background" src = "loko.png">
+    <img id = "darkbackground" src = "dark.png">
+    <img id = "mushbackground" src = "mushroom.png">
+    <img id = "beachbackground" src = "beach.png">
+    <br>
+    <button id = "trix" onclick = "backpize()">price-10gems</button>
+    <button id = "darktrix" onclick = "backpizedark()">price-20gems</button>
+    <button id = "mushtrix" onclick = "backpizemush()">price-20gems & 30gold</button>
+    <button id = "beachtrix" onclick = "backpizebeach()">price-25gems</button>
+    <br>
+    <hr>
+    <div id="goto"></div>
+    <a href = "#backtogameback" onclick = "go(1)">backgrounds</a><br><a href = "#backtogame" onclick = "go(1)">alchemy</a>
+    <br>
+    <hr>
+    <b id="gold"></b>
+    <br>
+    <b id = "gems"> </b>
+    <button id = "twice" onclick = "damage()">2X the Damage<br>price-10 gold</button>
+    <button id = "price25" onclick = "prise25()">increases the money made X1<br>price-25 gold</button>
+    <button id = "low" onclick = "speedlow()">low speed of the orbs<br>price-20 gold</button>
+    <button id = "automaticearning" onclick = "earning()">starts poping bubbles randomly (popes bloons every 10sec)<br>price-15 gold</button>
+    <button id = "leadup" onclick = "lead()">be able to pop lead bubbles<br>price-30</button>
+    <b id="life">life - 3</b>
+    <button onclick = "lifeup()">1 life up<br>price-10gems</button>
+    <button id = "blowsbomb" onclick = "blows()"><b>frezes</b> every bubble on th screen(Power up : costs 40 gold)<br>Colldown 40seconds</button><label id = "Colldown"></label>
+    <button id = "realblowsbomb" onclick = "realblows()"><b>blows</b> every bubble on th screen(Power up : costs 100 gold)<br>Colldown 20seconds</button><label id = "realColldown"></label>
+    <style>
+        #divider
+        {
+            margin-bottom: 500px;
+        }
+        body
+        {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        #twice
+        {
+            margin-left: 30px;
+        }
+        #trix
+        {
+            margin-bottom: 400px;
+        }
+        #darkbackground
+        {
+            height: 200px;
+        }
+        #mushbackground
+        {
+            height: 200px;
+        }
+        #beachbackground
+        {
+            height: 200px;
+        }
+        #darktrix
+        {
+            margin-left: 200px;
+        }
+        #mushtrix
+        {
+            margin-left: 200px;
+        }
+        #beachtrix
+        {
+            margin-left: 200px;
+        }
+        #left
+        {
+            margin-left: 500px;
+        }
+        #right
+        {
+            margin-left: 500px;
+            margin-bottom: 30px;
+        }
+        #middle
+        {
+            margin-left: 500px;
+            margin-bottom: 30px;
+        }
+        #tap
+        {
+            height: 600px;
+            width: 1345px;
+            margin-bottom: 100px;
+            background-color: aqua;
+        }
+    </style>
+</body>
+</html>
